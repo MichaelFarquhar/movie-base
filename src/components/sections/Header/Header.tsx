@@ -5,6 +5,7 @@ const Header = () => {
     return (
         <div className={styles.header}>
             <div className={styles.title}>MovieBase</div>
+            <input className={styles.search} placeholder="Search movies" />
         </div>
     );
 };
