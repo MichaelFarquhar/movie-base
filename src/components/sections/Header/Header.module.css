@@ -1,8 +1,14 @@
+.headerContainer {
+    background: #282c34;
+    box-shadow: rgb(0 0 0 / 10%) 0px 4px 12px;
+    width: 100%;
+}
+
 .header {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    margin: 1em 0;
+    padding: 1em 0;
 }
 
 .title {
