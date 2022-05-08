@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import './App.css';
 
 // Layout Components
@@ -6,11 +6,34 @@ import Header from './components/layout/Header';
 import Body from './components/layout/Body';
 import Footer from './components/layout/Footer';
 
+import { MovieContext } from './context/MovieContext';
+
+const apiKey = process.env.REACT_APP_API_KEY;
+
 function App() {
+    const [data, setData] = useState({
+        trending: {},
+    });
+
+    useEffect(() => {
+        fetch(`https://api.themoviedb.org/3/trending/all/day?api_key=${apiKey}`)
+            .then((res) => res.json())
+            .then((res) =>
+                setData({
+                    trending: res,
+                })
+            )
+            .catch((error) => console.log(error));
+    }, []);
+
+    console.log(data);
+
     return (
         <div className="app">
             <Header />
-            <Body />
+            <MovieContext.Provider value={data}>
+                <Body />
+            </MovieContext.Provider>
             <Footer />
         </div>
     );
