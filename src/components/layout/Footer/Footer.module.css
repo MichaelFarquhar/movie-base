@@ -7,5 +7,18 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 1em 0;
+    padding: 2em 0;
+    color: #b7b7b7;
+    font-size: 1rem;
+}
+
+.footer__icons {
+    display: flex;
+    align-items: center;
+}
+
+.footer__icons > a {
+    margin: 0 0.5em;
+    line-height: 0;
+    font-size: 1.5rem;
 }
