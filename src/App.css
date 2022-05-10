@@ -3,7 +3,18 @@
     display: flex;
     min-height: 100vh;
     flex-direction: column;
-    font-size: calc(10px + 2vmin);
+    font-size: calc(8px + 1vmin);
     color: white;
     font-family: 'Ubuntu', sans-serif;
+}
+
+a {
+    color: #b39ddb;
+    transition: 100ms ease-in;
+}
+a:hover {
+    color: #9575cd;
+}
+a:active {
+    color: #9575cd;
 }
