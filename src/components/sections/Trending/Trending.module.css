@@ -1,0 +1,9 @@
+.trending {
+    display: flex;
+    overflow-x: auto;
+    flex-wrap: nowrap;
+}
+
+/* .trendingRow::-webkit-scrollbar {
+    display: none;
+} */

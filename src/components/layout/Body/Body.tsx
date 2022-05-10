@@ -1,4 +1,4 @@
-import React from 'react';
+import Trending from '../../sections/Trending';
 import Container from '../Container';
 import styles from './Body.module.css';
 
@@ -6,7 +6,7 @@ const Body = () => {
     return (
         <div className={styles.body}>
             <Container>
-                <h1>Body</h1>
+                <Trending />
             </Container>
         </div>
     );

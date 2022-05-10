@@ -16,7 +16,9 @@ function App() {
     });
 
     useEffect(() => {
-        fetch(`https://api.themoviedb.org/3/trending/all/day?api_key=${apiKey}`)
+        fetch(
+            `https://api.themoviedb.org/3/movie/popular?api_key=${apiKey}&language=en-US&page=1`
+        )
             .then((res) => res.json())
             .then((res) =>
                 setData({
