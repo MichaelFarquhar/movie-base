@@ -16,8 +16,8 @@ const Trending = () => {
     return (
         <div>
             <h3>Trending Movies</h3>
-            <div>
-                {trending.results?.map((item: MovieItemType) => {
+            <div className={styles.trending}>
+                {trending.results?.slice(0, 15).map((item: MovieItemType) => {
                     return (
                         <img
                             src={`${posterPath}${item.poster_path}`}
